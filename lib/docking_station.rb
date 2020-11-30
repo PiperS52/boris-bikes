@@ -1,8 +1,3 @@
-# https://stackoverflow.com/questions/53890486/ruby-fail-statement-guard-condition-returning-nil
-# stage 20
-# https://github.com/adrianeyre/boris-bikes/blob/master/spec/docking_station_spec.rb
-# https://github.com/NJBow/boris-bikes/blob/master/lib/docking_station.rb
-
 require_relative 'bike'
 
 class DockingStation

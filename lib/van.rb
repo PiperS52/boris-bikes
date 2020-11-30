@@ -15,6 +15,6 @@ class Van
 
   def unload(bike)
     #remove_bike
-  end 
+  end
 
 end
