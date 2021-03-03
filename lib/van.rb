@@ -1,20 +1,14 @@
+require_relative 'bike_container'
+
 class Van
-
-  attr_reader :bikes, :capacity
-
-  DEFAULT_CAPACITY = 20
-
-  def initialize(capacity=DEFAULT_CAPACITY)
-    @capacity = capacity
-    @bikes = []
-  end
+  include BikeContainer
 
   def load(bike)
-    #add_bike
+    add_bike(bike)
   end
 
-  def unload(bike)
-    #remove_bike
+  def unload
+    remove_bike
   end
 
 end

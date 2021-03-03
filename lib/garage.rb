@@ -1,20 +1,22 @@
+require_relative 'bike_container'
+require_relative 'bike'
+
 class Garage
-
-  attr_reader :bikes, :capacity
-
-  DEFAULT_CAPACITY = 20
-
-  def initialize(capacity=DEFAULT_CAPACITY)
-    @capacity = capacity
-    @bikes = []
-  end
+  include BikeContainer
 
   def store(bike)
-    #add_bike
+    add_bike(bike)
+    fix_bikes
   end
 
-  def unstore(bike)
-    #remove_bike
-  end 
+  def release
+    remove_bike
+  end
+
+  private
+
+  def fix_bikes
+    bikes.each { |bike| bike.fix }
+  end
 
 end
